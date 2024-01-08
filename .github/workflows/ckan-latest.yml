@@ -1,0 +1,33 @@
+name: Generate and Commit CSV
+
+on:
+  schedule:
+    # Runs at 12:00 UTC every day
+    - cron: "0 12 * * *"
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Run Script to Generate CSV
+        run: node your_script.js
+
+      - name: Commit and Push CSV
+        run: |
+          git add -f data/ckan-updates.csv
+          git commit -m "Update CSV file" || true  # The script won't fail if there's nothing to commit
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
