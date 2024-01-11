@@ -43,8 +43,8 @@ async function downloadDataAndSaveToCSV(url, csvFilePath) {
         : "";
       line.Datum = convertTimestamp(line.timestamp);
       const link =
-        "https://daten.berlin.de/datensaetze/" +
-        title.replaceAll(",", "").replaceAll(" - ", "-").replaceAll(" ", "-");
+        "https://daten.berlin.de/search/node/" +
+        title.replace(/\s/g, "%20");
       line.Name = `<a href='${link}' target='_blank'>${title}</a>`;
       line.Art = line.activity_type === "changed package" ? "update" : "neu";
 
