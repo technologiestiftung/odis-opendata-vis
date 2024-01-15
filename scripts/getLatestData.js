@@ -25,13 +25,13 @@ function findNewest(data, days) {
       new Date(today.getFullYear(), today.getMonth(), today.getDate() - days) <=
       dateReleased
     ) {
-      data[obj].activityType = "neu";
+      data[obj].activityType = "Neu";
       newestArray.push(data[obj]);
     } else if (
       new Date(today.getFullYear(), today.getMonth(), today.getDate() - days) <=
       dateUpdated
     ) {
-      data[obj].activityType = "update";
+      data[obj].activityType = "Update";
       newestArray.push(data[obj]);
     }
   }
