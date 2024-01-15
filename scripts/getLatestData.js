@@ -67,7 +67,7 @@ async function filterSavetoCSV(data) {
     const link =
       "https://daten.berlin.de/datensaetze/" +
       title.replaceAll(",", "").replaceAll(" - ", "-").replaceAll(" ", "-");
-    oneEntry.Name = `<a style='color:red' href='${link}' target='_blank'>${title}</a>`;
+    oneEntry.Name = `<a style='color:#333' href='${link}' target='_blank'>${title}</a>`;
     oneEntry.Art = d.activityType;
     filteredData.push(oneEntry);
   });
