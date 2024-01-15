@@ -1,14 +1,14 @@
 Datum,Name,Art
-12.01.2024,<a href='https://daten.berlin.de/datensaetze/Versammlungen-im-Land-Berlin' target='_blank'>Versammlungen im Land Berlin</a>,update
-12.01.2024,<a href='https://daten.berlin.de/datensaetze/Berliner-Weihnachtsmärkte' target='_blank'>Berliner Weihnachtsmärkte</a>,update
-12.01.2024,<a href='https://daten.berlin.de/datensaetze/Berliner-Straßen--und-Volksfeste' target='_blank'>Berliner Straßen- und Volksfeste</a>,update
-12.01.2024,<a href='https://daten.berlin.de/datensaetze/VBB-Fahrplandaten-via-GTFS' target='_blank'>VBB-Fahrplandaten via GTFS</a>,update
-11.01.2024,<a href='https://daten.berlin.de/datensaetze/Geometrien-der-Wahlbezirke-für-die-Wahl-des-Europäischen-Parlaments-in-Berlin-2024' target='_blank'>Geometrien der Wahlbezirke für die Wahl des Europäischen Parlaments in Berlin 2024</a>,neu
-11.01.2024,<a href='https://daten.berlin.de/datensaetze/Wahlbezirke-der-Teilwahlwiederholung-für-die-Wahl-des-Deutschen-Bundestag-2024-in-Berlin' target='_blank'>Wahlbezirke der Teilwahlwiederholung für die Wahl des Deutschen Bundestag 2024 in Berlin</a>,neu
-9.01.2024,<a href='https://daten.berlin.de/datensaetze/Prüfberichte-der-Berliner-Heimaufsicht' target='_blank'>Prüfberichte der Berliner Heimaufsicht</a>,update
-9.01.2024,"<a href='https://daten.berlin.de/datensaetze/COVID-19-in-Berlin-Fallzahlen-und-Indikatoren-Gesamtübersicht' target='_blank'>COVID-19 in Berlin, Fallzahlen und Indikatoren - Gesamtübersicht</a>",update
-9.01.2024,"<a href='https://daten.berlin.de/datensaetze/COVID-19-in-Berlin-7-Tage-Inzidenz-nach-Altersgruppen-und-Meldewochen-Gesamtübersicht' target='_blank'>COVID-19 in Berlin, 7-Tage-Inzidenz nach Altersgruppen und Meldewochen - Gesamtübersicht</a>",update
-9.01.2024,"<a href='https://daten.berlin.de/datensaetze/COVID-19-in-Berlin-Verteilung-nach-Altersgruppen' target='_blank'>COVID-19 in Berlin, Verteilung nach Altersgruppen</a>",update
-9.01.2024,"<a href='https://daten.berlin.de/datensaetze/COVID-19-in-Berlin-Verteilung-in-den-Bezirken-Gesamtübersicht' target='_blank'>COVID-19 in Berlin, Verteilung in den Bezirken - Gesamtübersicht</a>",update
-9.01.2024,"<a href='https://daten.berlin.de/datensaetze/COVID-19-in-Berlin-Verteilung-in-den-Bezirken' target='_blank'>COVID-19 in Berlin, Verteilung in den Bezirken</a>",update
-8.01.2024,<a href='https://daten.berlin.de/datensaetze/Energieverbrauchsübersicht-bezirklicher-Gebäude-Bezirk-Treptow-Köpenick-2017-2022' target='_blank'>Energieverbrauchsübersicht bezirklicher Gebäude - Bezirk Treptow-Köpenick 2017 - 2022</a>,update
+12.01.2024,<a style='color:red' href='https://daten.berlin.de/datensaetze/Versammlungen-im-Land-Berlin' target='_blank'>Versammlungen im Land Berlin</a>,update
+12.01.2024,<a style='color:red' href='https://daten.berlin.de/datensaetze/Berliner-Weihnachtsmärkte' target='_blank'>Berliner Weihnachtsmärkte</a>,update
+12.01.2024,<a style='color:red' href='https://daten.berlin.de/datensaetze/Berliner-Straßen--und-Volksfeste' target='_blank'>Berliner Straßen- und Volksfeste</a>,update
+12.01.2024,<a style='color:red' href='https://daten.berlin.de/datensaetze/VBB-Fahrplandaten-via-GTFS' target='_blank'>VBB-Fahrplandaten via GTFS</a>,update
+11.01.2024,<a style='color:red' href='https://daten.berlin.de/datensaetze/Geometrien-der-Wahlbezirke-für-die-Wahl-des-Europäischen-Parlaments-in-Berlin-2024' target='_blank'>Geometrien der Wahlbezirke für die Wahl des Europäischen Parlaments in Berlin 2024</a>,neu
+11.01.2024,<a style='color:red' href='https://daten.berlin.de/datensaetze/Wahlbezirke-der-Teilwahlwiederholung-für-die-Wahl-des-Deutschen-Bundestag-2024-in-Berlin' target='_blank'>Wahlbezirke der Teilwahlwiederholung für die Wahl des Deutschen Bundestag 2024 in Berlin</a>,neu
+9.01.2024,<a style='color:red' href='https://daten.berlin.de/datensaetze/Prüfberichte-der-Berliner-Heimaufsicht' target='_blank'>Prüfberichte der Berliner Heimaufsicht</a>,update
+9.01.2024,"<a style='color:red' href='https://daten.berlin.de/datensaetze/COVID-19-in-Berlin-Fallzahlen-und-Indikatoren-Gesamtübersicht' target='_blank'>COVID-19 in Berlin, Fallzahlen und Indikatoren - Gesamtübersicht</a>",update
+9.01.2024,"<a style='color:red' href='https://daten.berlin.de/datensaetze/COVID-19-in-Berlin-7-Tage-Inzidenz-nach-Altersgruppen-und-Meldewochen-Gesamtübersicht' target='_blank'>COVID-19 in Berlin, 7-Tage-Inzidenz nach Altersgruppen und Meldewochen - Gesamtübersicht</a>",update
+9.01.2024,"<a style='color:red' href='https://daten.berlin.de/datensaetze/COVID-19-in-Berlin-Verteilung-nach-Altersgruppen' target='_blank'>COVID-19 in Berlin, Verteilung nach Altersgruppen</a>",update
+9.01.2024,"<a style='color:red' href='https://daten.berlin.de/datensaetze/COVID-19-in-Berlin-Verteilung-in-den-Bezirken-Gesamtübersicht' target='_blank'>COVID-19 in Berlin, Verteilung in den Bezirken - Gesamtübersicht</a>",update
+9.01.2024,"<a style='color:red' href='https://daten.berlin.de/datensaetze/COVID-19-in-Berlin-Verteilung-in-den-Bezirken' target='_blank'>COVID-19 in Berlin, Verteilung in den Bezirken</a>",update
+8.01.2024,<a style='color:red' href='https://daten.berlin.de/datensaetze/Energieverbrauchsübersicht-bezirklicher-Gebäude-Bezirk-Treptow-Köpenick-2017-2022' target='_blank'>Energieverbrauchsübersicht bezirklicher Gebäude - Bezirk Treptow-Köpenick 2017 - 2022</a>,update
