@@ -86,7 +86,7 @@ async function filterSavetoCSV(data) {
 
   const metaData = {
     annotate: {
-      notes: "Letzter Update: " + convertTimestamp(new Date()),
+      notes: "Zuletzt aktualisiert: " + convertTimestamp(new Date()),
     },
   };
   console.log(metaData);
