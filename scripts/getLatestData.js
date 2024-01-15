@@ -45,7 +45,6 @@ function convertTimestamp(timestamp) {
   // Extract day, month, and year
   const day = date.getDate(); // Day of the month
   let month = date.getMonth() + 1; // Month is 0-indexed in JavaScript, so add 1
-  console.log("month.lengh", month.toString.length);
   month = month.toString.length === 1 ? "0" + month : month;
   const year = date.getFullYear(); // Year
 
