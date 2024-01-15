@@ -52,19 +52,6 @@ function convertTimestamp(timestamp) {
   return `${day}.${month}.${year}`;
 }
 
-function removeDuplicates(arr, key) {
-  const uniqueValues = new Set();
-  return arr.filter((item) => {
-    const keyValue = item.data.package.title;
-    if (uniqueValues.has(keyValue)) {
-      // If the key value is already in the set, it's a duplicate - filter it out
-      return false;
-    }
-    uniqueValues.add(keyValue);
-    return true;
-  });
-}
-
 async function filterSavetoCSV(data) {
   // Extract the 'result' property
   let results = data.result;
@@ -80,7 +67,7 @@ async function filterSavetoCSV(data) {
     const link =
       "https://daten.berlin.de/datensaetze/" +
       title.replaceAll(",", "").replaceAll(" - ", "-").replaceAll(" ", "-");
-    oneEntry.Name = `<a href='${link}' target='_blank'>${title}</a>`;
+    oneEntry.Name = `<a style='color:red' href='${link}' target='_blank'>${title}</a>`;
     oneEntry.Art = d.activityType;
     filteredData.push(oneEntry);
   });
@@ -99,7 +86,7 @@ async function filterSavetoCSV(data) {
 
   const metaData = {
     annotate: {
-      notes: "Letztes Update: " + convertTimestamp(new Date()),
+      notes: "Letzter Update: " + convertTimestamp(new Date()),
     },
   };
   console.log(metaData);
