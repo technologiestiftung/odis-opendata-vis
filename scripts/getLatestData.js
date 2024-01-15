@@ -61,7 +61,7 @@ async function filterSavetoCSV(data) {
     const oneEntry = {};
     const title = d?.title ? d?.title : "";
     oneEntry.Datum =
-      d.activityType === "neu"
+      d.activityType === "Neu"
         ? convertTimestamp(d.date_released)
         : convertTimestamp(d.date_updated);
     const link =
