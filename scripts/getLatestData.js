@@ -67,10 +67,12 @@ async function filterSavetoCSV(data) {
     const link =
       "https://daten.berlin.de/datensaetze/" +
       title.replaceAll(",", "").replaceAll(" - ", "-").replaceAll(" ", "-");
-    oneEntry.Titel = `<a style='text-decoration: underline; line-height: 1.4;color: #222;' href='${link}' target='_blank'>${title}</a>`;
+    oneEntry.Titel = `<a style='text-decoration: underline; line-height: 1.4;color: #222' href='${link}' target='_blank'>${title}</a>`;
     oneEntry.Art = d.activityType;
     filteredData.push(oneEntry);
   });
+
+  style = "color:#333";
 
   // Create a writable stream for the CSV file
   const csvStream = format({ headers: true });
