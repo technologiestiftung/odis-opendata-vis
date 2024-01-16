@@ -15,24 +15,32 @@ const getJSON = async (url) => {
   return json; // get JSON from the response
 };
 
+function sortByDate(obj) {
+  const sortedKeys = Object.keys(obj).sort((a, b) => new Date(a) - new Date(b));
+
+  const sortedObj = {};
+  sortedKeys.forEach((key) => {
+    sortedObj[key] = obj[key];
+  });
+
+  return sortedObj;
+}
+
 async function sumFileFormats() {
   //   const allData = getJSON("./data/rawAll.json");
   const rawAll = JSON.parse(fs.readFileSync("./data/rawAll.json"));
   rawAll.result.results.forEach((res) => {
     const yearMonthUpdate = res.date_updated?.slice(0, 4);
     const yearMonthRelease = res.date_released?.slice(0, 4);
-    // console.log(
-    //   "metadata_created",
-    //   res.metadata_created,
-    //   " metadata_modified",
-    //   res.metadata_modified
-    // );
+
+    const currentDate = new Date();
+    const lastYear = currentDate.getFullYear() - 1;
 
     if (
       yearMonthUpdate < 2000 ||
       yearMonthRelease < 2000 ||
-      yearMonthUpdate > 2023 ||
-      yearMonthRelease > 2023
+      yearMonthUpdate > lastYear ||
+      yearMonthRelease > lastYear
     ) {
       return;
     }
@@ -55,22 +63,7 @@ async function sumFileFormats() {
     }
   });
 
-  function sortByDate(obj) {
-    const sortedKeys = Object.keys(obj).sort(
-      (a, b) => new Date(a) - new Date(b)
-    );
-
-    const sortedObj = {};
-    sortedKeys.forEach((key) => {
-      sortedObj[key] = obj[key];
-    });
-
-    return sortedObj;
-  }
-
   const sortedData = sortByDate(dates);
-
-  console.log("sortedData", sortedData);
 
   const header = ["date"];
   const update = ["Updates"];
@@ -87,6 +80,15 @@ async function sumFileFormats() {
   csv += release.toString() + "\n";
 
   console.log(csv);
+
+  fs.writeFile(
+    "./data/sumByDate.csv",
+    csv,
+    {
+      encoding: "utf8",
+    },
+    (err) => {}
+  );
 }
 
 sumFileFormats();
