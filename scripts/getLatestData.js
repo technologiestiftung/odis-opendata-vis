@@ -72,8 +72,6 @@ async function filterSavetoCSV(data) {
     filteredData.push(oneEntry);
   });
 
-  style = "color:#333";
-
   // Create a writable stream for the CSV file
   const csvStream = format({ headers: true });
   const writableStream = fs.createWriteStream("./data/ckan-updates.csv");
