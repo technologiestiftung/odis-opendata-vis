@@ -28,8 +28,13 @@ function sortByDate(obj) {
 
 async function sumFileFormats() {
   //   const allData = getJSON("./data/rawAll.json");
-  const rawAll = JSON.parse(fs.readFileSync("./data/rawAll.json"));
-  rawAll.result.results.forEach((res) => {
+  //   const rawAll = JSON.parse(fs.readFileSync("./data/rawAll.json"));
+
+  const data = await getJSON(
+    "https://datenregister.berlin.de/api/3/action/package_search?start=0&rows=1000000"
+  );
+
+  data.result.results.forEach((res) => {
     const yearMonthUpdate = res.date_updated?.slice(0, 4);
     const yearMonthRelease = res.date_released?.slice(0, 4);
 
