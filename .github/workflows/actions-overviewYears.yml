@@ -1,4 +1,4 @@
-name: Generate and Commit CSV
+name: Overview Years
 
 on:
   schedule:
