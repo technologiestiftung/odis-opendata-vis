@@ -2,8 +2,8 @@ name: Generate and Commit CSV
 
 on:
   schedule:
-    # Runs at 2:00 UTC every day
-    - cron: "0 2 * * *"
+    # Runs at once a year on jan 1st
+    - cron: "0 1 1 1 *"
   push:
     branches:
       - main
@@ -19,13 +19,13 @@ jobs:
         run: npm install
 
       - name: Run script
-        run: node scripts/getLatestData
+        run: node scripts/sumByDate
 
       - name: Commit and Push CSV
         run: |
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          git add -f data/ckan-updates.csv data/metaData.json
+          git add -f data/sumByDate.csv
           git commit -m "Update CSV file" || true  # The script won't fail if there's nothing to commit
           git push
         env:
