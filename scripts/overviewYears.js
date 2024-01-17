@@ -42,8 +42,8 @@ async function sumFileFormats() {
     const lastYear = currentDate.getFullYear() - 1;
 
     if (
-      yearMonthUpdate < 2000 ||
-      yearMonthRelease < 2000 ||
+      yearMonthUpdate < 2011 ||
+      yearMonthRelease < 2011 ||
       yearMonthUpdate > lastYear ||
       yearMonthRelease > lastYear
     ) {
