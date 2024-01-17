@@ -6,60 +6,14 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# {repo-template}
+#Skripte und Daten für einen Überblick über das Open Data Portal Berlin
 
-## TODO (after you generated the repo)
+Dieses Repository enthält Skripte, die die CKAN API des Berliner Datenportals nutzen, um Daten abzurufen. Diese Daten werden analysiert und die Ergebnisse in CSV-Dateien zusammengefasst. Diese CSVs dienen als Grundlage für zwei Datawrapper-Diagramme:
 
-- [ ] Review the content of the README.md and adjust to your liking
-- [ ] Read the README.md till the end and adjust the content licensing,
-      logos, etc (I know you stopped at tbd...)
-- [ ] Adjust the file [.github/CODEOWNERS](./.github/CODEOWNERS)
-- [ ] Adjust the files under [.github/ISSUE_TEMPLATE](./.github/ISSUE_TEMPLATE)
-- [ ] If you use staging and main branches use this template for [.github/renovate.json](./.github/renovate.json)
+    Datawrapper Diagramm 1
+    Datawrapper Diagramm 2
 
-```json
-{
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>technologiestiftung/renovate-config"],
-  "baseBranches": ["staging"]
-}
-```
-
-- [ ] Do you want to honor all kinds of contributions? Use [all-contributors](https://allcontributors.org/)
-
-```bash
-npx all-contributors-cli check
-npx all-contributors-cli add ff6347 doc
-```
-
-You can use it on GitHub just by commenting on PRs and issues:
-
-```plain
-@all-contributors please add @ff6347 for infrastructure, tests and code
-```
-
-- [ ] Add your project description
-- [ ] Get fancy shields at https://shields.io
-
-## Prerequisites
-
-tbd...
-
-## Installation
-
-tbd...
-
-## Usage or Deployment
-
-tbd...
-
-## Useful Links
-
-[CKAN API docs](https://docs.ckan.org/en/2.7/api/index.html)
-
-## Contributing
-
-Before you create a pull request, write an issue so we can discuss your changes.
+Die Skripte werden regelmäßig durch Github Actions ausgeführt.
 
 ## Contributors
 
@@ -83,8 +37,6 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 ## Content Licensing
 
 Texts and content available as [CC BY](https://creativecommons.org/licenses/by/3.0/de/).
-
-Illustrations by {MARIA_MUSTERFRAU}, all rights reserved.
 
 ## Credits
 
