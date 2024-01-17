@@ -6,12 +6,12 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-#Skripte und Daten für einen Überblick über das Open Data Portal Berlin
+# Skripte und Daten für einen Überblick über das Open Data Portal Berlin
 
-Dieses Repository enthält Skripte, die die CKAN API des Berliner Datenportals nutzen, um Daten abzurufen. Diese Daten werden analysiert und die Ergebnisse in CSV-Dateien zusammengefasst. Diese CSVs dienen als Grundlage für zwei Datawrapper-Diagramme:
+Dieses Repository enthält Skripte, die die CKAN API des [Berliner Datenportals](https://daten.berlin.de/) nutzen, um Daten abzurufen. Diese Daten werden analysiert und die Ergebnisse in CSV-Dateien zusammengefasst. Diese CSVs dienen als Grundlage für zwei Datawrapper-Diagramme:
 
-    Datawrapper Diagramm 1
-    Datawrapper Diagramm 2
+[Datawrapper Diagramm 1](https://www.datawrapper.de/_/ZgWJU/)
+[Datawrapper Diagramm 2](https://www.datawrapper.de/_/Rij6z/)
 
 Die Skripte werden regelmäßig durch Github Actions ausgeführt.
 
