@@ -77,7 +77,7 @@ async function filterSavetoCSV(data) {
 
   // Create a writable stream for the CSV file
   const csvStream = format({ headers: true });
-  const writableStream = fs.createWriteStream("./data/overviewSevenDays.csv");
+  const writableStream = fs.createWriteStream("./data/overviewDays.csv");
   writableStream.on("finish", () => {
     console.log(`Saved CSV`);
   });
