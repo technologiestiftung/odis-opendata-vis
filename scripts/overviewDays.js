@@ -105,7 +105,7 @@ async function filterSavetoCSV(data) {
 }
 
 async function runScript() {
-  const days = 7;
+  const days = 14;
   const data = await getJSON(
     "https://datenregister.berlin.de/api/3/action/package_search?start=0&rows=100"
   );

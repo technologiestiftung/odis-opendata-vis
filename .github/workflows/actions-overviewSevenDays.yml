@@ -1,4 +1,4 @@
-name: Overview 7 Days
+name: Overview Days
 
 on:
   schedule:
@@ -19,13 +19,13 @@ jobs:
         run: npm install
 
       - name: Run script
-        run: node scripts/overviewSevenDays
+        run: node scripts/overviewDays
 
       - name: Commit and Push CSV
         run: |
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          git add -f data/overviewSevenDays.csv data/metaData.json
+          git add -f data/overviewDays.csv data/metaData.json
           git commit -m "Update CSV file" || true  # The script won't fail if there's nothing to commit
           git push
         env:
