@@ -2,6 +2,28 @@ const axios = require("axios");
 const fs = require("fs");
 const { format } = require("fast-csv");
 
+function removeDuplicatesFromArray(array) {
+  const uniqueObjects = [];
+
+  // Helper function to check if an object is a duplicate
+  function isDuplicate(obj) {
+    return uniqueObjects.some(
+      (uniqueObj) =>
+        obj.date_released === uniqueObj.date_released &&
+        obj.date_updated === uniqueObj.date_updated &&
+        obj.title === uniqueObj.title
+    );
+  }
+
+  for (const obj of array) {
+    if (!isDuplicate(obj)) {
+      uniqueObjects.push(obj);
+    }
+  }
+
+  return uniqueObjects;
+}
+
 const getJSON = async (url) => {
   const response = await fetch(url);
   if (!response.ok) {
@@ -112,14 +134,24 @@ async function filterSavetoCSV(data) {
 
 async function runScript() {
   const days = 14;
-  const data = await getJSON(
-    "https://datenregister.berlin.de/api/3/action/package_search?start=0&rows=10000"
+  const dataUpdated = await getJSON(
+    "https://datenregister.berlin.de/api/3/action/package_search?start=0&rows=100&sort=date_updated%20desc"
   );
+  const dataReleased = await getJSON(
+    "https://datenregister.berlin.de/api/3/action/package_search?start=0&rows=100&sort=date_released%20desc"
+  );
+
   let resultsArray = [];
-  for (const id in data.result.results) {
-    resultsArray = resultsArray.concat(data.result.results[id]);
+  for (const id in dataUpdated.result.results) {
+    resultsArray = resultsArray.concat(dataUpdated.result.results[id]);
   }
-  const newestData = findNewest(resultsArray, days);
+  for (const id in dataReleased.result.results) {
+    resultsArray = resultsArray.concat(dataReleased.result.results[id]);
+  }
+
+  const uniqueArray = removeDuplicatesFromArray(resultsArray);
+
+  const newestData = findNewest(uniqueArray, days);
 
   filterSavetoCSV(newestData);
 
