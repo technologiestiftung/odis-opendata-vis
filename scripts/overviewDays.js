@@ -20,17 +20,16 @@ function findNewest(data, days) {
 
     let dateUpdated = new Date(data[obj].date_updated);
     let dateReleased = new Date(data[obj].date_released);
+    let dateToday = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      today.getDate() - days
+    );
 
-    if (
-      new Date(today.getFullYear(), today.getMonth(), today.getDate() - days) <=
-      dateReleased
-    ) {
+    if (dateToday <= dateReleased) {
       data[obj].activityType = "Neu";
       newestArray.push(data[obj]);
-    } else if (
-      new Date(today.getFullYear(), today.getMonth(), today.getDate() - days) <=
-      dateUpdated
-    ) {
+    } else if (dateToday <= dateUpdated) {
       data[obj].activityType = "Update";
       newestArray.push(data[obj]);
     }
@@ -107,7 +106,7 @@ async function filterSavetoCSV(data) {
 async function runScript() {
   const days = 14;
   const data = await getJSON(
-    "https://datenregister.berlin.de/api/3/action/package_search?start=0&rows=100"
+    "https://datenregister.berlin.de/api/3/action/package_search?start=0&rows=10000"
   );
   let resultsArray = [];
   for (const id in data.result.results) {
