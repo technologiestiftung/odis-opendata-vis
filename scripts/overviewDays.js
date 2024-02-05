@@ -74,6 +74,13 @@ async function filterSavetoCSV(data) {
     filteredData.push(oneEntry);
   });
 
+  filteredData.sort((a, b) => {
+    const dateA = new Date(a.Datum.split(".").reverse().join("-"));
+    const dateB = new Date(b.Datum.split(".").reverse().join("-"));
+
+    return dateB - dateA;
+  });
+
   // Create a writable stream for the CSV file
   const csvStream = format({ headers: true });
   const writableStream = fs.createWriteStream("./data/overviewDays.csv");
